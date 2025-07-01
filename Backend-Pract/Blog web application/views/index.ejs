@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">My Blog</a></h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/new">New Post</a>
+    </nav>
+  </header>
+  <main>
+    <h2>All Posts</h2>
+    <% if (posts.length === 0) { %>
+      <p>No posts yet. <a href="/new">Create one!</a></p>
+    <% } else { %>
+      <ul class="posts">
+        <% posts.forEach(post => { %>
+          <li>
+            <h3><%= post.title %></h3>
+            <p><%= post.content %></p>
+            <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+            <a href="/edit/<%= post.id %>">Edit</a>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </main>
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> My Blog</p>
+  </footer>
+</body>
+</html>

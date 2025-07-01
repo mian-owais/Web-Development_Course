@@ -1,0 +1,104 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #222;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.posts {
+  list-style: none;
+  padding: 0;
+}
+.posts li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.posts h3 {
+  margin: 0 0 0.5rem 0;
+}
+.post-form {
+  display: flex;
+  flex-direction: column;
+}
+.post-form label {
+  margin: 0.5rem 0 0.2rem 0;
+}
+.post-form input,
+.post-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.post-form button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.post-form button:hover {
+  background: #444;
+}
+button[type="submit"] {
+  margin-right: 0.5rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  header, main {
+    padding: 1rem;
+  }
+  main {
+    font-size: 0.98rem;
+  }
+}
